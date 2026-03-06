@@ -1,7 +1,10 @@
 const express = require('express')
 const app = express();
-const booksRouter = require('./api/routes/books')
 
+app.use(express.json());
+app.use(express.static('public'));
+
+const booksRouter = require('./api/routes/books')
 app.use('/api/books', booksRouter)
 
 app.listen(3000, () => {

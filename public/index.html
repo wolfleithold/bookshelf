@@ -7,9 +7,22 @@
   </head>
   <body>
     <h1>Wolfs Bookshelf</h1>
-    <form>
-      Books
-    </form>
+    <form id="add-book-form">
+  <input type="text" id="title" placeholder="Book Title" required />
+  <input type="text" id="author" placeholder="Author" required />
+  
+  <select id="status" required>
+    <option value="">-- Select Status --</option>
+    <option value="owned">Owned</option>
+    <option value="wishlist">Wishlist</option>
+    <option value="reading">Currently Reading</option>
+  </select>
+  
+  <button type="submit">Add Book</button>
+</form>
+    <div id="book-list">
+
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
